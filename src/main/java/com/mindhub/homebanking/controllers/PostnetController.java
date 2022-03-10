@@ -27,13 +27,6 @@ public class PostnetController {
     @Autowired
     TransactionService transactionService;
 
-
-/*    @GetMapping("/cards")
-    public List<CardDTO> getCards() {
-        return cardRepository.findAll().stream().map(CardDTO::new).collect(toList());
-    } */
-
-
     @PostMapping("/postnet")
     public ResponseEntity<Object> createLoans(Authentication authentication, @RequestBody PostnetApplicationDTO postnetApplicationDTO) {
 
