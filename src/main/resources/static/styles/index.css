@@ -20,8 +20,8 @@ body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	background: linear-gradient(rgba(124, 67, 112, 0.157), rgba(93, 92, 92, 0.767)),
 		url(../images/crop-slide-enero-pellegrini-5c48897bac801.jpg);
-	background-image: no-repeat;
-	background-image: fixed;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-image: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -148,12 +148,6 @@ login-container .btn-login:active {
 .login-container.active {
 	transform: rotateY(180deg);
 }
-/* .login-container:hover > .front {
-	transform: rotateY(-180deg);
-}
-.login-container:hover > .back {
-	transform: rotateY(0deg);
-} */
 
 .registro {
 	margin-left: 2rem;

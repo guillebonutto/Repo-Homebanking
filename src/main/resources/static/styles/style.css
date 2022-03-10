@@ -355,7 +355,7 @@ main {
 	}
 
 	.login-container {
-		margin-left: 3rem;
+		margin-left: 5% !important;
 	}
 
 	#logo {
@@ -563,7 +563,6 @@ li:hover {
 	top: 0;
 	left: 0;
 	transition: all 300ms ease;
-	z-index: 2 !important;
 }
 
 .menu-expanded {
@@ -743,7 +742,7 @@ a {
 }
 
 .footer {
-	/* height: 7.5rem; */
+	width: 100vw;
 	margin-top: 6rem;
 	background-color: #1a4eb4a9;
 	/* margin-left: 11rem; */
