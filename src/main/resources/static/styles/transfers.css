@@ -1,0 +1,79 @@
+.formulario-tarjeta {
+	background-image: radial-gradient(
+		circle at 12.5% 12.5%,
+		var(--soft_primary) 0,
+		var(--primary_hover) 50%,
+		var(--primary) 100%
+	);
+	width: 100%;
+	max-width: 43.75rem;
+	padding: 3.125rem 1.875rem 1.875rem 1.875rem;
+	text-shadow: 0.0625rem 0.0625rem 0.1875rem black;
+	border-radius: 0.625rem;
+	position: relative;
+	/* top: -9.375rem; */
+}
+
+.formulario-tarjeta label {
+	color: #f6fbff;
+	margin-bottom: 0.3125rem;
+	font-size: 1rem;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+	border: 0.125rem solid #ced6e0;
+	font-size: 1.125rem;
+	height: 3.125rem;
+	width: 100%;
+	padding: 0.3125rem 0.75rem;
+	transition: 0.3s ease all;
+	border-radius: 0.3125rem;
+}
+
+.formulario-tarjeta .tipo input {
+	height: 1.25rem;
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+	border: 0.0625rem solid var(--primary_hover);
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+	outline: rgba(4, 4, 4);
+	box-shadow: 0.0625rem 0.4375rem 0.625rem -0.3125rem rgba(90, 116, 148, 0.3);
+}
+
+.formulario-tarjeta .flexbox {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.flexbox p {
+	color: #fff;
+	font-weight: bold;
+	font-size: 0.9375rem;
+}
+
+.flexbox .transferAll {
+	position: absolute;
+	left: 28.125rem;
+	color: var(--primary_hover);
+	text-shadow: none;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.formulario-tarjeta .group-data {
+	width: 100%;
+}
+
+.formulario-tarjeta .group-input {
+	width: 100%;
+	margin-right: 0.9375rem;
+	margin-bottom: 1.25rem;
+}

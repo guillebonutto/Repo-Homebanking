@@ -1,0 +1,170 @@
+:root {
+	--light: #ffffff;
+	--dark: #37414a;
+	--primary: #165e0d;
+	--primary_hover: #27ad1b;
+	--secondary: #cb424a;
+	--soft_primary: #e2f5ff;
+	--soft_secondary: #ffdedf;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	overflow: auto;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: linear-gradient(rgba(124, 67, 112, 0.157), rgba(93, 92, 92, 0.767)),
+		url(../images/crop-slide-enero-pellegrini-5c48897bac801.jpg);
+	background-image: no-repeat;
+	background-image: fixed;
+	background-image: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/* height: 92vh; */
+
+	/* background-image: url(../images/crop-slide-enero-pellegrini-5c48897bac801.jpg);
+	background-repeat: no-repeat;
+	background-size: cover; */
+}
+
+#app {
+	height: 95vh;
+}
+
+.login-container {
+	position: relative;
+	width: 21.875rem;
+	margin-left: 10rem;
+	margin-right: 2rem;
+	transition: 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transform: rotateY(0deg);
+	perspective: 62.5rem !important;
+	transform-style: preserve-3d;
+	/* backface-visibility: hidden; */
+}
+
+.login-container img {
+	margin-top: 1.5rem;
+	width: 4rem;
+	border-radius: 50%;
+	box-shadow: 0rem 0rem 0rem 0.0625rem #43d34a, 0rem 0rem 0rem 0.3125rem #93e988,
+		0.5rem 0.5rem 0.9375rem var(--primary), -0.5rem -0.5rem 0.9375rem #8be988;
+	margin-bottom: 1.25rem;
+}
+
+.login-container p {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--light);
+	letter-spacing: 0.125rem;
+}
+
+.login-container .fields .datavideo p {
+	font-size: 0.8125rem;
+	color: var(--soft_primary);
+}
+
+.login-container .fields .data {
+	border-radius: 1.25rem;
+	box-shadow: inset 0.5rem 0.5rem 0.5rem #0e3b5f, inset -0.5rem -0.5rem 0.5rem #0c5896;
+	margin-bottom: 1.25rem;
+}
+.login-container .fields .data i {
+	color: var(--soft_primary);
+	margin: 1.25rem 0.3125rem 1.25rem 1.25rem;
+}
+
+.login-container .fields .data input {
+	outline: none;
+	border: none;
+	background: none;
+	font-size: 0.9375rem;
+	padding: 1.25rem 1.25rem 1.25rem 0.3125rem;
+	color: var(--soft_primary);
+}
+
+.login-container .fields .data input::placeholder {
+	color: var(--soft_primary);
+}
+
+.login-container .btn-login {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 70%;
+	height: 3.125rem;
+	font-size: 1.25rem;
+	font-weight: 700;
+	border-radius: 1.875rem;
+	transition: 0.5s;
+	background: var(--soft_primary);
+	color: var(--secondary);
+}
+
+.login-container .btn-login:hover {
+	background: var(--secondary);
+	color: var(--soft_primary);
+}
+
+login-container .btn-login:active {
+	background: #770e08;
+}
+
+.front {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 1.25rem;
+	background-color: #1b6bad;
+	box-shadow: 0.5rem 0.5rem 0.9375rem #0d335e, -0.5rem -0.5rem 1.5625rem #88a7e9;
+	transform: rotateY(0deg);
+}
+
+.active > .front {
+	display: none;
+}
+
+.back {
+	position: absolute;
+	top: 0;
+	width: 21.875rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 1.25rem;
+	background-color: #1b6bad;
+	box-shadow: 0.5rem 0.5rem 0.9375rem #0d335e, -0.5rem -0.5rem 1.5625rem #88a7e9;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+.login-container.active {
+	transform: rotateY(180deg);
+}
+/* .login-container:hover > .front {
+	transform: rotateY(-180deg);
+}
+.login-container:hover > .back {
+	transform: rotateY(0deg);
+} */
+
+.registro {
+	margin-left: 2rem;
+}
+
+.registro a {
+	cursor: pointer;
+	text-decoration: underline !important;
+	color: var(--soft_primary) !important;
+}
+
+.ojo {
+	cursor: pointer;
+}

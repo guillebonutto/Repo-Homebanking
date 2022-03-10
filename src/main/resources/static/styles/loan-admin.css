@@ -1,0 +1,77 @@
+body {
+	background-color: #ced6e0 !important;
+}
+
+.formulario-tarjeta {
+	background-color: white;
+	width: 100%;
+	max-width: 700px;
+	margin-top: 70px;
+	padding: 30px 30px 30px 30px;
+	position: relative;
+	/* top: -150px; */
+}
+
+.formulario-tarjeta label {
+	display: block;
+	color: #7d8994;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+	border: 2px solid #ced6e0;
+	font-size: 18px;
+	height: 50px;
+	width: 100%;
+	padding: 5px 12px;
+	transition: all 0.3s ease all;
+	border-radius: 5px;
+}
+
+.formulario-tarjeta .tipo input {
+	height: 20px;
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+	border: 1px solid var(--primary_hover);
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+	outline: rgba(4, 4, 4);
+	box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+}
+
+.formulario-tarjeta input {
+	margin-bottom: 20px;
+}
+
+.formulario-tarjeta .flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.formulario-tarjeta .expire {
+	width: 100%;
+}
+
+/* .formulario-tarjeta .cvv {
+	min-width: 100px;
+} */
+
+.formulario-tarjeta .group-select {
+	width: 100%;
+	margin-right: 15px;
+}
+
+.prestamojpg {
+	position: absolute;
+	top: -50px;
+	left: 45%;
+	width: 100px;
+	border-radius: 50%;
+}

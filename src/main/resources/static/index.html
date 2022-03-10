@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+		<link rel="stylesheet" href="./styles/index.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+	</head>
+	<body id="body1">
+		<div class="d-flex justify-content-end align-items-center mt-2 me-3 form-check form-switch">
+			<input
+				class="form-check-input"
+				type="checkbox"
+				role="switch"
+				v-model="nightmode"
+				@change="chequeo()"
+			/>
+			<p for="noche" class="ms-2 mb-0" id="noche">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="icon icon-tabler icon-tabler-moon-stars"
+					width="20"
+					height="20"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="#0d265e"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<path
+						d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+					/>
+					<path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+					<path d="M19 11h2m-1 -1v2" />
+				</svg>
+			</p>
+		</div>
+		<div id="app">
+			<div :class="'mt-5 mb-5 login-container ' + active">
+				<div class="front">
+					<img src="./images/images.jpg" alt="" />
+					<p>LOGIN TO ECOBANK</p>
+					<div class="fields">
+						<div class="data">
+							<i class="fas fa-user"></i>
+							<input
+								type="email"
+								id="input3"
+								v-model="email"
+								@keyup.enter="enter('email')"
+								placeholder="E-mail"
+							/>
+						</div>
+						<div class="data">
+							<i class="fas fa-lock"></i>
+							<input
+								type="password"
+								id="input4"
+								v-model="password"
+								@keyup.enter="enter('password')"
+								placeholder="Password"
+							/>
+							<i :class="'me-3 ojo ' + showPassword" @click="showingPassword" :title="tooltip"></i>
+						</div>
+					</div>
+					<button type="button" class="btn mt-3 mb-3 btn-login" @click="login">Sign in</button>
+					<div class="registro">
+						<p>Are you not registered? <a @click="ocultar()">Register Now</a></p>
+					</div>
+				</div>
+				<div class="back">
+					<img src="./images/images.jpg" alt="" />
+					<p>REGISTER TO ECOBANK</p>
+					<div class="fields">
+						<div class="data">
+							<i class="far fa-address-card"></i>
+							<input
+								type="text"
+								id="input1"
+								v-model="firstName"
+								@keyup.enter="enter('firstName')"
+								placeholder="First Name"
+							/>
+						</div>
+						<div class="data">
+							<i class="far fa-address-card"></i>
+							<input
+								type="text"
+								id="input2"
+								v-model="lastName"
+								@keyup.enter="enter('lastName')"
+								placeholder="Last Name"
+							/>
+						</div>
+						<div class="data">
+							<i class="fas fa-user"></i>
+							<input
+								type="email"
+								id="inputRmail"
+								v-model="emailRegister"
+								@keyup.enter="enter('emailRegist')"
+								placeholder="E-mail"
+							/>
+						</div>
+						<div class="data">
+							<i class="fas fa-lock"></i>
+							<input
+								type="password"
+								id="inputPass"
+								v-model="passwordRegister"
+								@keyup.enter="enter('passwordRegist')"
+								placeholder="Password"
+							/>
+							<i :class="'me-3 ojo ' + showPassword" @click="showingPassword"></i>
+						</div>
+					</div>
+					<button type="button" class="btn mt-3 mb-3 btn-login" @click="registering">
+						Register
+					</button>
+					<div class="registro ms-0">
+						<p style="color: white">Already a user? <a @click="ocultar()">Sign in</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Cliengo installation code for Guillermo -->
+		<script type="text/javascript">
+			;(function () {
+				var ldk = document.createElement("script")
+				ldk.type = "text/javascript"
+				ldk.async = true
+				ldk.src =
+					"https://s.cliengo.com/weboptimizer/61f580beb809da002a4f3113/61f580bfb809da002a4f3116.js?platform=dashboard_ecommerce"
+				var s = document.getElementsByTagName("script")[0]
+				s.parentNode.insertBefore(ldk, s)
+			})()
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://kit.fontawesome.com/9cb96889d0.js" crossorigin="anonymous"></script>
+		<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="./lib/index.js"></script>
+		<footer class="footer d-flex justify-content-center">---</footer>
+	</body>
+</html>

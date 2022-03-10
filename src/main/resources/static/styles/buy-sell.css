@@ -1,0 +1,28 @@
+@media only screen and (max-width: 1024px) {
+	.container .contenedor1 {
+		margin-left: 2rem !important;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.container .contenedor1 {
+		margin-left: 9rem !important;
+	}
+}
+
+.buy {
+	border: 1px solid black;
+	width: 15rem;
+	height: 15rem;
+	z-index: 1;
+}
+.sell {
+	border: 1px solid black;
+	width: 15rem;
+	height: 15rem;
+	z-index: 1;
+}
+
+button {
+	padding: 0.5rem;
+	border: none !important;
+}
