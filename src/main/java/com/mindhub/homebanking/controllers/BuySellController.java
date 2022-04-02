@@ -29,6 +29,10 @@ public class BuySellController {
         Account account1 = accountService.findByNumber(originAccount);
         Account account2 = accountService.findByNumber(destinyAccount);
 
+        if (account2 == null || account2.getDeleted()) {
+            return new ResponseEntity<>("You don't have a dollar account", HttpStatus.FORBIDDEN);
+        }
+
         transactionService.saveTransaction(new Transaction(TransactionType.DEBIT,amount,"successful purchase of dollars", LocalDateTime.now(),account1));
         account1.setBalance(account1.getBalance()-amount);
         accountService.saveAccount(account1);

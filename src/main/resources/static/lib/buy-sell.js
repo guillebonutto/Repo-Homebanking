@@ -7,6 +7,7 @@ var app = new Vue({
 		message: "Hello Vue!",
 		clients: [],
 		accounts: [],
+		dollarAccounts: [],
 		amount: 0,
 		firstName: "",
 		lastName: "",
@@ -64,6 +65,16 @@ var app = new Vue({
 			}
 		},
 		loadData() {
+			axios.get("/api/clients/current").then((response) => {
+				// handle success
+				this.clients = response.data
+				this.accounts = response.data.accounts
+				this.firstName = response.data.firstName
+				this.lastName = response.data.lastName
+				this.email = response.data.email
+				let photo = document.querySelector("#photo")
+				photo.setAttribute("src", this.clients.photo)
+			})
 			axios
 				.get(`https://www.dolarsi.com/api/api.php?type=valoresprincipales`)
 				.then((response) => {
@@ -76,16 +87,6 @@ var app = new Vue({
 					// handle error
 					console.log(error)
 				})
-			axios.get("/api/clients/current").then((response) => {
-				// handle success
-				this.clients = response.data
-				this.accounts = response.data.accounts
-				this.firstName = response.data.firstName
-				this.lastName = response.data.lastName
-				this.email = response.data.email
-				let photo = document.querySelector("#photo")
-				photo.setAttribute("src", this.clients.photo)
-			})
 		},
 		signOut() {
 			axios.post("/api/logout").then(() => {
@@ -116,21 +117,63 @@ var app = new Vue({
 				btn2.style.pointerEvents = "none"
 			} else {
 				this.originAccount = this.accounts.filter((type) => type.type == "SAVING_ACCOUNT")
-				this.destinyAccount = this.accounts.filter((type) => type.type == "DOLLARS_ACCOUNT")
-				this.originAccount = this.originAccount[0].number
-				this.destinyAccount = this.destinyAccount[0].number
-				if (this.destinyAccount != "") {
-					axios
-						.post(
-							"/api/clients/current/accounts/dollars",
-							`amount=${this.amount}&originAccount=${this.originAccount}&destinyAccount=${this.destinyAccount}`
-						)
-						.then((response) => {
-							console.log("uy success")
-							this.buying = true
-							this.selling = false
-						})
+				this.dollarAccounts = this.accounts.filter((type) => type.type == "DOLLARS_ACCOUNT")
+				if (this.dollarAccounts.length > 0) {
+					this.dollarAccounts = this.dollarAccounts.filter((deleted) => deleted.deleted == false)
+					this.destinyAccount = this.dollarAccounts[0].number
 				}
+				this.originAccount = this.originAccount[0].number
+				axios
+					.post(
+						"/api/clients/current/accounts/dollars",
+						`amount=${this.amount}&originAccount=${this.originAccount}&destinyAccount=${this.destinyAccount}`
+					)
+					.then((response) => {
+						Swal.fire({
+							icon: "success",
+							text: "Successful purchase",
+							timer: 1500,
+						})
+					})
+					.catch((error) => {
+						if (error.response.data == "You don't have a dollar account") {
+							Swal.fire({
+								icon: "info",
+								title: "You don't have a dollar account",
+								text: "Do you want to create one?",
+								showDenyButton: true,
+								showCancelButton: true,
+								confirmButtonText: "Yes!",
+							}).then((result) => {
+								/* Read more about isConfirmed, isDenied below */
+								if (result.isConfirmed) {
+									axios
+										.post("/api/clients/current/accounts", "type=DOLLARS_ACCOUNT")
+										.then(() => {
+											Swal.fire({
+												icon: "success",
+												text: "You created a new account",
+											}).then(() => {
+												axios.get("/api/clients/current").then((response) => {
+													// handle success
+													this.accounts = response.data.accounts
+													this.buy()
+												})
+											})
+										})
+										.catch((err) => {
+											Swal.fire({
+												icon: "error",
+												title: "Error",
+												text: "An error occurred in the proccess 🥺 try again and if the error persist don not hesitate to contact us 😊",
+											})
+										})
+								} else if (result.isDenied) {
+									Swal.fire("Changes are not saved", "", "info")
+								}
+							})
+						}
+					})
 			}
 		},
 		sell() {
