@@ -356,6 +356,11 @@ main {
 
 	.login-container {
 		margin-left: 2% !important;
+		width: 19rem !important;
+	}
+
+	.back {
+		width: 19rem !important;
 	}
 
 	#logo {
