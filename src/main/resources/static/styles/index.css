@@ -34,10 +34,6 @@ body {
 	background-size: cover; */
 }
 
-#app {
-	height: 95vh;
-}
-
 .login-container {
 	position: relative;
 	width: 21.875rem;
