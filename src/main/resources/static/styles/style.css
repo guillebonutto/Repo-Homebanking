@@ -406,6 +406,10 @@ main {
 		align-items: center;
 	}
 
+	.tooltipInterest {
+		left: -2px !important;
+	}
+
 	pre {
 		white-space: pre-wrap;
 		white-space: -moz-pre-wrap !important;
