@@ -126,7 +126,9 @@ var app = new Vue({
 				axios
 					.post(
 						"/api/clients/current/accounts/dollars",
-						`amount=${this.amount}&originAccount=${this.originAccount}&destinyAccount=${this.destinyAccount}`
+						`amount=${this.amount * this.dolarCompra}&originAccount=${
+							this.originAccount
+						}&destinyAccount=${this.destinyAccount}`
 					)
 					.then((response) => {
 						Swal.fire({
@@ -194,7 +196,9 @@ var app = new Vue({
 					axios
 						.post(
 							"/api/clients/current/accounts/dollars",
-							`amount=${this.amount}&originAccount=${this.originAccount}&destinyAccount=${this.destinyAccount}`
+							`amount=${this.amount * this.dolarVenta}&originAccount=${
+								this.originAccount
+							}&destinyAccount=${this.destinyAccount}`
 						)
 						.then((response) => {
 							console.log("Sell success")
