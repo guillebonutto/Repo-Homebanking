@@ -481,6 +481,10 @@ form > box-icon {
 	z-index: 3;
 }
 
+.container-main {
+	height: 100vh;
+}
+
 .div-spinner {
 	position: fixed;
 	display: flex;
