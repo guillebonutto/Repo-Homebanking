@@ -20,7 +20,7 @@ public class WebAuthorization extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/admin.html").hasAuthority("ADMIN")
-                .antMatchers("/rest/**", "/h2-console/**", "/api/accounts").hasAuthority("ADMIN")
+                .antMatchers("/rest/**", "/h2-console/**", "/api/**").hasAuthority("ADMIN")
                 .antMatchers("/index.html", "/lib/**", "/styles/**", "/images/**").permitAll()
                 .antMatchers(HttpMethod.POST,"/api/loans/admin").hasAuthority("ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/clients/current/**", "/api/loans").hasAuthority("CLIENT")
