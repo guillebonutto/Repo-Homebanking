@@ -106,6 +106,9 @@ var app = new Vue({
 				})
 		},
 		buy() {
+			let comprarrrr = Math.trunc(this.dolarCompra)
+			let cmmm = this.amount
+			let come = cmmm * comprarrrr
 			if (!this.buying) {
 				let btn1 = document.querySelector("#btnbuy")
 				let btn2 = document.querySelector("#btnsell")
@@ -196,7 +199,7 @@ var app = new Vue({
 					axios
 						.post(
 							"/api/clients/current/accounts/dollars",
-							`amount=${this.amount * this.dolarVenta}&originAccount=${
+							`amount=${this.amount / this.dolarVenta}&originAccount=${
 								this.originAccount
 							}&destinyAccount=${this.destinyAccount}`
 						)
