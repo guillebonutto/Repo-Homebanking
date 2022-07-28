@@ -1,32 +1,34 @@
-let input1 = document.querySelector("#name")
-let input2 = document.querySelector("#surname")
-let input3 = document.querySelector("#email")
-let text = document.getElementsByClassName("texto")
+let input1 = document.querySelector('#name')
+let input2 = document.querySelector('#surname')
+let input3 = document.querySelector('#email')
+let text = document.getElementsByClassName('texto')
 
 var app = new Vue({
-	el: "#app",
+	el: '#app',
 	data: {
-		message: "Hello Vue!",
-		photo: "",
+		message: 'Hello Vue!',
+		photo: '',
 		clients: [],
-		firstName: "",
-		lastName: "",
-		emailMenu: "",
+		firstName: '',
+		lastName: '',
+		emailMenu: '',
 		showModal: true,
 		loadingPage: true,
-		url: "",
+		url: '',
 		json: [],
-		name: "",
-		surname: "",
-		email: "",
+		name: '',
+		surname: '',
+		email: '',
 		loans: [],
-		collap: "menu-collapsed",
+		collap: 'menu-collapsed',
 	},
 	created() {
-		axios.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales").then((response) => {
-			this.dolarCompra = response.data[0].casa.compra
-			this.dolarVenta = response.data[6].casa.venta
-		})
+		axios
+			.get('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
+			.then((response) => {
+				this.dolarCompra = response.data[0].casa.compra
+				this.dolarVenta = response.data[6].casa.venta
+			})
 		// Make a request for a user with a given ID
 		this.loadData()
 		this.chequeo()
@@ -34,15 +36,15 @@ var app = new Vue({
 	},
 	methods: {
 		check() {
-			if (this.collap == "menu-collapsed") {
-				this.collap = "menu-expanded"
+			if (this.collap == 'menu-collapsed') {
+				this.collap = 'menu-expanded'
 			} else {
-				this.collap = "menu-collapsed"
+				this.collap = 'menu-collapsed'
 			}
 		},
 		loadData() {
 			axios
-				.get("http://localhost:8080/rest/clients")
+				.get('http://localhost:8080/rest/clients')
 				.then((response) => {
 					// handle success
 					this.clients = response.data._embedded.clients
@@ -52,21 +54,24 @@ var app = new Vue({
 					// handle error
 					console.log(error)
 				})
-			axios.get("/api/clients/current").then((response) => {
-				this.showModal = false
-				this.loadingPage = false
-				this.firstName = response.data.firstName
-				this.lastName = response.data.lastName
-				this.emailMenu = response.data.email
-				this.loans = response.data.loans
-				photo.setAttribute("src", response.data.photo)
-			})
+			axios
+				.get('/api/clients/current')
+				.then((response) => {
+					this.showModal = false
+					this.loadingPage = false
+					this.firstName = response.data.firstName
+					this.lastName = response.data.lastName
+					this.emailMenu = response.data.email
+					this.loans = response.data.loans
+					photo.setAttribute('src', response.data.photo)
+				})
+				.catch((error) => console.log(error))
 		},
 		postClient() {
-			if (this.name != "" && this.surname != "" && this.email.includes("@")) {
-				if (this.email.includes("hotmail.com")) {
+			if (this.name != '' && this.surname != '' && this.email.includes('@')) {
+				if (this.email.includes('hotmail.com')) {
 					axios
-						.post("http://localhost:8080/rest/clients", {
+						.post('http://localhost:8080/rest/clients', {
 							firstName: this.name,
 							lastName: this.surname,
 							email: this.email,
@@ -74,6 +79,7 @@ var app = new Vue({
 						.then((response) => {
 							this.loadData()
 						})
+						.catch((error) => console.log(error))
 				}
 			}
 		},
@@ -85,44 +91,44 @@ var app = new Vue({
 		},
 		chequeo() {
 			if (check.checked) {
-				body1.style.backgroundColor = "black"
+				body1.style.backgroundColor = 'black'
 				for (let h = 0; h < input.length; h++) {
-					input[h].style.color = "white"
+					input[h].style.color = 'white'
 				}
 				for (let i = 0; i < text.length; i++) {
-					text[i].style.color = "white"
+					text[i].style.color = 'white'
 				}
 				for (let j = 0; j < span.length; j++) {
-					span[j].style.backgroundColor = "black"
-					span[j].style.color = "white"
+					span[j].style.backgroundColor = 'black'
+					span[j].style.color = 'white'
 				}
-				noche.style.color = "white"
-				noche.style.fontWeight = "bold"
-				titulo.style.textShadow = "2px 2px 8px white"
+				noche.style.color = 'white'
+				noche.style.fontWeight = 'bold'
+				titulo.style.textShadow = '2px 2px 8px white'
 			} else {
-				body1.style.backgroundColor = "white"
+				body1.style.backgroundColor = 'white'
 				for (let h = 0; h < input.length; h++) {
-					input[h].style.color = "black"
+					input[h].style.color = 'black'
 				}
 				for (let i = 0; i < text.length; i++) {
-					text[i].style.color = "black"
+					text[i].style.color = 'black'
 				}
 				for (let j = 0; j < span.length; j++) {
-					span[j].style.backgroundColor = "white"
+					span[j].style.backgroundColor = 'white'
 					// if (input[j].value == "") {
-					span[j].style.color = "black"
+					span[j].style.color = 'black'
 					// } else {
 					// 	span[j].style.color = "#4285f4"
 					// }
 				}
-				noche.style.color = "black"
-				noche.style.fontWeight = ""
-				titulo.style.textShadow = "2px 2px 7px black"
+				noche.style.color = 'black'
+				noche.style.fontWeight = ''
+				titulo.style.textShadow = '2px 2px 7px black'
 			}
 		},
 		signOut() {
-			axios.post("/api/logout").then(() => {
-				window.location.href = "/index.html"
+			axios.post('/api/logout').then(() => {
+				window.location.href = '/index.html'
 			})
 		},
 		disableDefault() {
