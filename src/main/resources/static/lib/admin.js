@@ -44,7 +44,7 @@ var app = new Vue({
 		},
 		loadData() {
 			axios
-				.get('http://localhost:8080/rest/clients')
+				.get('/rest/clients')
 				.then((response) => {
 					// handle success
 					this.clients = response.data._embedded.clients
@@ -71,7 +71,7 @@ var app = new Vue({
 			if (this.name != '' && this.surname != '' && this.email.includes('@')) {
 				if (this.email.includes('hotmail.com')) {
 					axios
-						.post('http://localhost:8080/rest/clients', {
+						.post('/rest/clients', {
 							firstName: this.name,
 							lastName: this.surname,
 							email: this.email,
@@ -130,9 +130,6 @@ var app = new Vue({
 			axios.post('/api/logout').then(() => {
 				window.location.href = '/index.html'
 			})
-		},
-		disableDefault() {
-			return false
 		},
 	},
 })

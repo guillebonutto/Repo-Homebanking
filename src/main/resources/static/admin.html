@@ -225,7 +225,7 @@
 					<div class="div-sec">
 						<section class="section1">
 							<h2>Client Manager</h2>
-							<form autocomplete="off" @submit="disableDefault()">
+							<form autocomplete="off">
 								<fieldset>
 									<div class="form">
 										<input
@@ -245,7 +245,7 @@
 										<input type="text" id="input" v-model="email" required />
 										<label for="email"><span id="span">Email address:</span></label>
 									</div>
-									<button type="button" class="btn mt-3 mb-3" @click="postClient()">
+									<button type="button" class="btn mt-3 mb-3" @click="postClient">
 										Add Client
 									</button>
 								</fieldset>

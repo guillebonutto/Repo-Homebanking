@@ -21,26 +21,19 @@ main {
 }
 
 @media only screen and (min-width: 2560px) {
-	header,
-	main,
-	.footer {
-		margin-left: 25.2rem;
-		font-size: 2rem;
-	}
-
 	#logo {
 		margin-top: 2rem !important;
-		width: 9rem;
+		width: 7rem;
 	}
 
 	h1 {
 		margin-top: 0.5rem !important;
-		margin-bottom: 8rem !important;
-		font-size: 3.6rem !important;
+		margin-bottom: 5rem !important;
+		font-size: 2rem !important;
 	}
 
 	h2 {
-		font-size: 3rem !important;
+		font-size: 2rem !important;
 	}
 
 	.menu-collapsed {
@@ -48,7 +41,7 @@ main {
 	}
 
 	.menu-expanded {
-		width: 25rem;
+		width: 15rem;
 	}
 
 	.menu-collapsed .cont-client img {
@@ -57,12 +50,12 @@ main {
 	}
 
 	.menu-expanded .cont-client img {
-		width: 6rem;
-		height: 6rem;
+		width: 4rem;
+		height: 4rem;
 	}
 
 	.cont-menu li {
-		font-size: 1.8rem;
+		font-size: 1rem;
 	}
 
 	.cont-menu nav {
@@ -70,7 +63,7 @@ main {
 	}
 
 	.menu-expanded .cont-menu nav a {
-		font-size: 2rem;
+		font-size: 1rem;
 		padding-bottom: 1.5rem !important;
 	}
 
@@ -97,6 +90,10 @@ main {
 
 	h1 {
 		font-size: 1.6rem !important;
+	}
+
+	h2 {
+		font-size: 1.5rem !important;
 	}
 
 	.menu-collapsed .cont-client img {
@@ -189,6 +186,14 @@ main {
 		display: flex;
 		justify-content: space-around;
 	}
+
+	.card {
+		width: 400px;
+	}
+
+	.form-help {
+		width: 50%;
+	}
 }
 
 @media only screen and (max-width: 1500px) {
@@ -196,7 +201,7 @@ main {
 	main,
 	.footer {
 		margin-left: 12.2rem;
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 	}
 
 	#logo {
@@ -366,7 +371,7 @@ main {
 		width: 19rem !important;
 	}
 
-	.back {
+	.login-container .back {
 		width: 19rem !important;
 	}
 
@@ -407,6 +412,36 @@ main {
 		font-size: 1rem !important;
 	}
 
+	.card-number {
+		margin: 0px 15px 10px !important;
+		font-size: 13px !important;
+	}
+
+	.card {
+		width: 250px;
+		height: 170px !important;
+	}
+
+	.investor {
+		top: 17px !important;
+	}
+
+	.chip {
+		top: 25px !important;
+	}
+
+	.wave {
+		top: -15px !important;
+	}
+
+	.strip-bottom {
+		width: 130px !important;
+	}
+
+	.strip-top {
+		width: 120px !important;
+	}
+
 	.cont-menu li {
 		font-size: 0.65rem;
 	}
@@ -427,6 +462,10 @@ main {
 		white-space: -pre-wrap;
 		white-space: -o-pre-wrap;
 		word-wrap: break-word;
+	}
+
+	.form-help {
+		width: 100vw;
 	}
 }
 
