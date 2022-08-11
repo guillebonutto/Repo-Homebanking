@@ -20,7 +20,9 @@
 		/>
 	</head>
 	<body id="body1">
-		<div class="d-flex justify-content-end align-items-center mt-2 me-3 form-check form-switch">
+		<div
+			class="d-flex justify-content-end align-items-center mt-2 me-3 form-check form-switch"
+		>
 			<input
 				class="form-check-input"
 				type="checkbox"
@@ -75,10 +77,16 @@
 								@keyup.enter="enter('password')"
 								placeholder="Password"
 							/>
-							<i :class="'me-3 ojo ' + showPassword" @click="showingPassword" :title="tooltip"></i>
+							<i
+								:class="'me-3 ojo ' + showPassword"
+								@click="showingPassword"
+								:title="tooltip"
+							></i>
 						</div>
 					</div>
-					<button type="button" class="btn mt-3 mb-3 btn-login" @click="login">Sign in</button>
+					<button type="button" class="btn mt-3 mb-3 btn-login" @click="login">
+						Sign in
+					</button>
 					<div class="registro">
 						<p>Are you not registered? <a @click="ocultar()">Register Now</a></p>
 					</div>
@@ -141,12 +149,12 @@
 		<!-- Cliengo installation code for Guillermo -->
 		<script type="text/javascript">
 			;(function () {
-				var ldk = document.createElement("script")
-				ldk.type = "text/javascript"
+				var ldk = document.createElement('script')
+				ldk.type = 'text/javascript'
 				ldk.async = true
 				ldk.src =
-					"https://s.cliengo.com/weboptimizer/61f580beb809da002a4f3113/61f580bfb809da002a4f3116.js?platform=dashboard_ecommerce"
-				var s = document.getElementsByTagName("script")[0]
+					'https://s.cliengo.com/weboptimizer/61f580beb809da002a4f3113/61f580bfb809da002a4f3116.js?platform=dashboard_ecommerce'
+				var s = document.getElementsByTagName('script')[0]
 				s.parentNode.insertBefore(ldk, s)
 			})()
 		</script>
@@ -157,8 +165,14 @@
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-		<script src="https://kit.fontawesome.com/9cb96889d0.js" crossorigin="anonymous"></script>
-		<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+		<script
+			src="https://kit.fontawesome.com/9cb96889d0.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://widget.cloudinary.com/v2.0/global/all.js"
+			type="text/javascript"
+		></script>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="./lib/index.js"></script>
 	</body>
