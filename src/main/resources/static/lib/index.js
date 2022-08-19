@@ -113,7 +113,7 @@ var app = new Vue({
 					} else {
 						Swal.fire({
 							icon: 'error',
-							text: error.response.data,
+							text: error.message,
 							timer: 1500,
 						})
 					}
