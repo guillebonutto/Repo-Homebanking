@@ -38,9 +38,11 @@ var app = new Vue({
 					headers: { 'content-type': 'application/x-www-form-urlencoded' },
 				})
 				.then((response) => {
-					if (this.email == 'guille@hotmail.com') {
+				axios.get("/api/clients")
+				    .then((response) => {
 						window.location.href = '/admin.html'
-					} else window.location.href = 'web/accounts.html'
+				    })
+					.catch((error) => window.location.href = 'web/accounts.html')
 				})
 				.catch((error) => {
 					if (error.response == 'Missing data') {
