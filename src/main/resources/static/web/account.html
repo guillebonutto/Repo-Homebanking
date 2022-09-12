@@ -281,8 +281,8 @@
 					</div>
 					<div class="mb-3">
 						<div
-							:class="transaction.type + ' p-3 mt-2 body'"
 							v-for="transaction in filterTransaction"
+							:class="transaction.type + ' p-3 mt-2 body'"
 						>
 							<div class="date">
 								{{transaction.creationDate.substring(0,10)}}

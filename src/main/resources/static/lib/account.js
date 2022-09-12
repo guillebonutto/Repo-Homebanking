@@ -94,6 +94,7 @@ var app = new Vue({
 			this.balance = this.balance.toFixed(2)
 		},
 		filterDates() {
+			this.filterTransaction = []
 			this.transactions.forEach((transaction) => {
 				if (
 					(transaction.creationDate.substring(0, 10) >= this.fromDate &&
