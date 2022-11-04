@@ -34,9 +34,7 @@ var app = new Vue({
 		},
 		login() {
 			axios
-				.post('/api/login', 'email=' + this.email + '&password=' + this.password, {
-					headers: { 'content-type': 'application/x-www-form-urlencoded' },
-				})
+				.post('/api/login', 'email=' + this.email + '&password=' + this.password)
 				.then((response) => {
 				axios.get("/api/clients")
 				    .then((response) => {
@@ -90,9 +88,7 @@ var app = new Vue({
 						'&email=' +
 						this.emailRegister +
 						'&password=' +
-						this.passwordRegister,
-					{ headers: { 'content-type': 'application/x-www-form-urlencoded' } }
-				)
+						this.passwordRegister)
 				.then((response) => {
 					Swal.fire({
 						icon: 'success',
