@@ -88,13 +88,7 @@ var app = new Vue({
 						'&email=' +
 						this.emailRegister +
 						'&password=' +
-<<<<<<< HEAD
-						this.passwordRegister,
-					{ headers: { 'content-type': 'application/x-www-form-urlencoded' } }
-				)
-=======
 						this.passwordRegister)
->>>>>>> ff531d617933490376fdf1d6febb830dcc9607d7
 				.then((response) => {
 					Swal.fire({
 						icon: 'success',
