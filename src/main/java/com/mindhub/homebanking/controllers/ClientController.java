@@ -50,7 +50,7 @@ public class ClientController {
         }
 
         if (clientService.findClientByEmail(email) != null) {
-            return new ResponseEntity<>("Name already in use", HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>("Email already exist", HttpStatus.FORBIDDEN);
         }
 
         Random num = new Random();

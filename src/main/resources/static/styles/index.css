@@ -17,7 +17,7 @@
 body {
 	min-height: 100vh;
 	overflow: auto;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	background: linear-gradient(rgba(124, 67, 112, 0.157), rgba(93, 92, 92, 0.767)),
 		url(../images/crop-slide-enero-pellegrini-5c48897bac801.jpg);
 	background-repeat: no-repeat;
@@ -32,10 +32,6 @@ body {
 	/* background-image: url(../images/crop-slide-enero-pellegrini-5c48897bac801.jpg);
 	background-repeat: no-repeat;
 	background-size: cover; */
-}
-
-#app {
-	height: 95vh;
 }
 
 .login-container {

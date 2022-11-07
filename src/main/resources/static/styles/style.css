@@ -21,26 +21,19 @@ main {
 }
 
 @media only screen and (min-width: 2560px) {
-	header,
-	main,
-	.footer {
-		margin-left: 25.2rem;
-		font-size: 2rem;
-	}
-
 	#logo {
-		margin-top: 2.5rem !important;
-		width: 9rem;
+		margin-top: 2rem !important;
+		width: 7rem;
 	}
 
 	h1 {
 		margin-top: 0.5rem !important;
-		margin-bottom: 8rem !important;
-		font-size: 3.6rem !important;
+		margin-bottom: 5rem !important;
+		font-size: 2rem !important;
 	}
 
 	h2 {
-		font-size: 3rem !important;
+		font-size: 2rem !important;
 	}
 
 	.menu-collapsed {
@@ -48,7 +41,7 @@ main {
 	}
 
 	.menu-expanded {
-		width: 25rem;
+		width: 15rem;
 	}
 
 	.menu-collapsed .cont-client img {
@@ -57,12 +50,12 @@ main {
 	}
 
 	.menu-expanded .cont-client img {
-		width: 6rem;
-		height: 6rem;
+		width: 4rem;
+		height: 4rem;
 	}
 
 	.cont-menu li {
-		font-size: 1.8rem;
+		font-size: 1rem;
 	}
 
 	.cont-menu nav {
@@ -70,7 +63,7 @@ main {
 	}
 
 	.menu-expanded .cont-menu nav a {
-		font-size: 2rem;
+		font-size: 1rem;
 		padding-bottom: 1.5rem !important;
 	}
 
@@ -97,6 +90,10 @@ main {
 
 	h1 {
 		font-size: 1.6rem !important;
+	}
+
+	h2 {
+		font-size: 1.5rem !important;
 	}
 
 	.menu-collapsed .cont-client img {
@@ -140,14 +137,17 @@ main {
 	main,
 	.footer {
 		margin-left: 14.2rem;
-		font-size: 1rem;
+		font-size: 0.9rem;
 	}
 
 	h1 {
+		margin-top: 1rem !important;
+		margin-bottom: 2rem !important;
 		font-size: 1.6rem !important;
 	}
 
 	#logo {
+		margin-top: 2.5rem;
 		width: 5rem;
 	}
 
@@ -158,12 +158,12 @@ main {
 
 	.menu-expanded .cont-client img {
 		margin-top: 1rem;
-		width: 4rem;
-		height: 4rem;
+		width: 3rem;
+		height: 3rem;
 	}
 
 	.cont-menu li {
-		font-size: 1rem;
+		font-size: 0.8rem;
 	}
 
 	.menu-expanded {
@@ -178,9 +178,21 @@ main {
 		margin-top: 2rem;
 	}
 
+	.menu-expanded .cont-menu nav a {
+		font-size: 0.8rem;
+	}
+
 	.cont-tarjeta {
 		display: flex;
 		justify-content: space-around;
+	}
+
+	.card {
+		width: 400px;
+	}
+
+	.form-help {
+		width: 50%;
 	}
 }
 
@@ -189,7 +201,7 @@ main {
 	main,
 	.footer {
 		margin-left: 12.2rem;
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 	}
 
 	#logo {
@@ -211,8 +223,8 @@ main {
 
 	.menu-expanded .cont-client img {
 		margin-top: 1.5rem;
-		width: 4rem;
-		height: 4rem;
+		width: 3rem;
+		height: 3rem;
 	}
 
 	.menu-expanded {
@@ -224,11 +236,11 @@ main {
 	}
 
 	.menu-expanded .cont-menu nav a {
-		font-size: 0.85rem;
+		font-size: 0.7rem;
 	}
 
 	.cont-menu li {
-		font-size: 0.85rem;
+		font-size: 0.7rem;
 	}
 
 	.cont-tarjeta {
@@ -351,11 +363,16 @@ main {
 	main,
 	.footer {
 		margin-left: 3.5rem;
-		font-size: 0.8rem;
+		font-size: 0.65rem;
 	}
 
 	.login-container {
-		margin-left: 5% !important;
+		margin-left: 2% !important;
+		width: 19rem !important;
+	}
+
+	.login-container .back {
+		width: 19rem !important;
 	}
 
 	#logo {
@@ -391,6 +408,40 @@ main {
 		font-size: 1.3rem !important;
 	}
 
+	h3 {
+		font-size: 1rem !important;
+	}
+
+	.card-number {
+		margin: 0px 15px 10px !important;
+		font-size: 13px !important;
+	}
+
+	.card {
+		width: 250px;
+		height: 170px !important;
+	}
+
+	.investor {
+		top: 17px !important;
+	}
+
+	.chip {
+		top: 25px !important;
+	}
+
+	.wave {
+		top: -15px !important;
+	}
+
+	.strip-bottom {
+		width: 130px !important;
+	}
+
+	.strip-top {
+		width: 120px !important;
+	}
+
 	.cont-menu li {
 		font-size: 0.65rem;
 	}
@@ -401,12 +452,20 @@ main {
 		align-items: center;
 	}
 
+	.tooltipInterest {
+		left: -2px !important;
+	}
+
 	pre {
 		white-space: pre-wrap;
 		white-space: -moz-pre-wrap !important;
 		white-space: -pre-wrap;
 		white-space: -o-pre-wrap;
 		word-wrap: break-word;
+	}
+
+	.form-help {
+		width: 100vw;
 	}
 }
 
@@ -472,6 +531,10 @@ form > box-icon {
 	z-index: 3;
 }
 
+.container-form {
+	height: 100vh;
+}
+
 .div-spinner {
 	position: fixed;
 	display: flex;
@@ -522,7 +585,7 @@ button:hover {
 
 h1,
 h2 {
-	font-family: "Pacifico", cursive;
+	font-family: 'Pacifico', cursive;
 }
 
 /* .DEBIT {
@@ -713,7 +776,7 @@ li:hover {
 	width: 2.25rem;
 	float: left;
 	cursor: pointer;
-	content: "";
+	content: '';
 	border-top: 0.375rem solid var(--soft_primary);
 	padding: 0.1875rem;
 	border-bottom: 0.9375rem double var(--soft_primary);
@@ -742,7 +805,6 @@ a {
 }
 
 .footer {
-	width: 100vw;
 	margin-top: 6rem;
 	background-color: #1a4eb4a9;
 	/* margin-left: 11rem; */

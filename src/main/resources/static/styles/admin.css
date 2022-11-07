@@ -15,7 +15,6 @@
 }
 
 main {
-	margin-left: 10px !important;
 	min-height: 100vh;
 }
 
@@ -44,12 +43,6 @@ main {
 }
 
 @media only screen and (max-width: 992px) {
-	header,
-	main,
-	span,
-	button {
-		font-size: 0.2rem !important;
-	}
 	.div-principal {
 		display: flex;
 		align-items: center;
@@ -66,12 +59,6 @@ main {
 }
 
 @media only screen and (max-width: 1500px) {
-	header,
-	main,
-	span,
-	button {
-		font-size: 1rem !important;
-	}
 	.cont-tarjeta {
 		display: flex;
 		justify-content: space-around;
@@ -79,12 +66,6 @@ main {
 }
 
 @media only screen and (max-width: 1920px) {
-	header,
-	main,
-	span,
-	button {
-		font-size: 1.5rem;
-	}
 	.div-principal {
 		display: flex;
 		justify-content: space-around;
@@ -96,12 +77,6 @@ main {
 }
 
 @media only screen and (max-width: 2559px) {
-	header,
-	main,
-	span,
-	button {
-		font-size: 2rem;
-	}
 	.div-principal {
 		display: flex;
 		justify-content: space-around;
@@ -117,12 +92,6 @@ main {
 }
 
 @media only screen and (min-width: 2560px) {
-	header,
-	main,
-	span,
-	button {
-		font-size: 2rem !important;
-	}
 	.div-principal {
 		display: flex;
 		justify-content: space-around;
@@ -199,7 +168,8 @@ span {
 .tarjeta {
 	border-radius: 10px;
 	background: linear-gradient(180deg, var(--primary), var(--soft_primary));
-	box-shadow: 0.5rem 0.5rem 2rem var(--primary), -1.25rem -1.25rem 3.75rem var(--soft_primary);
+	box-shadow: 0.5rem 0.5rem 2rem var(--primary),
+		-1.25rem -1.25rem 3.75rem var(--soft_primary);
 }
 
 button {
@@ -218,7 +188,7 @@ button:hover {
 
 h1,
 h2 {
-	font-family: "Pacifico", cursive;
+	font-family: 'Pacifico', cursive;
 }
 
 h2 {

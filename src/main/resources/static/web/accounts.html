@@ -13,10 +13,17 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
-		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Lobster"
+			rel="stylesheet"
+			type="text/css"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+			rel="stylesheet"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -54,7 +61,12 @@
 					<div class="btn-menu" @click="check"></div>
 					<div class="cont-menu">
 						<div class="pt-3 d-flex flex-column align-items-center" id="titulo">
-							<img src="../images/images-removebg-preview.png" alt="logo" id="logo" width="40rem" />
+							<img
+								src="../images/images-removebg-preview.png"
+								alt="logo"
+								id="logo"
+								width="40rem"
+							/>
 							<h1>Ecobank</h1>
 						</div>
 						<div class="cont-client">
@@ -219,7 +231,9 @@
 				</div>
 			</header>
 			<main class="mb-5">
-				<div class="d-flex justify-content-end align-items-center mt-2 me-3 form-check form-switch">
+				<div
+					class="d-flex justify-content-end align-items-center mt-2 me-3 form-check form-switch"
+				>
 					<input
 						class="form-check-input"
 						type="checkbox"
@@ -244,7 +258,9 @@
 							<path
 								d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
 							/>
-							<path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+							<path
+								d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+							/>
 							<path d="M19 11h2m-1 -1v2" />
 						</svg>
 					</p>
@@ -266,7 +282,10 @@
 						<a class="nav-link" href="help.html">Help</a>
 					</li>
 				</ul>
-				<div id="div-principal" class="ms-4 texto animate__animated animate__bounceInDown">
+				<div
+					id="div-principal"
+					class="ms-4 texto animate__animated animate__bounceInDown"
+				>
 					<section>
 						<div class="add d-flex align-items-center">
 							<h2 class="me-3">Accounts</h2>
@@ -297,7 +316,7 @@
 							<h3><b>TOTAL BALANCE</b></h3>
 							<h4>${{totalBalance}}</h4>
 						</div>
-						<div class="mt-4 container d-flex flex-wrap">
+						<div class="mt-4 d-flex flex-wrap">
 							<div
 								class="mb-3 me-4 card-body rounded shadow"
 								v-for="person in accounts"
@@ -317,11 +336,15 @@
 										Date and Time: {{person.creationDate.substring(0,10)}}
 										{{person.creationDate.substring(11,16)}}
 									</p>
-									<p class="mb-3 card-text">Transactions: {{person.transactions.length}}</p>
+									<p class="mb-3 card-text">
+										Transactions: {{person.transactions.length}}
+									</p>
 								</div>
-								<div class="ms-2 me-2 d-flex justify-content-between">
+								<div class="ms-2 me-2 d-flex flex-wrap justify-content-between">
 									<div class="d-flex ms-1">
-										<button class="p-2" @click="link(person)"><b>See Transactions</b></button>
+										<button class="p-2" @click="link(person)">
+											<b>See Transactions</b>
+										</button>
 										<button class="p-2 ms-2 deleteCard" @click="hiddeAccount(person.id)">
 											Delete account
 										</button>
@@ -369,7 +392,11 @@
 							</div>
 						</div>
 						<div class="container d-flex flex-wrap mt-3">
-							<div class="me-4 card-body rounded shadow" v-for="loan in loans" style="z-index: 1">
+							<div
+								class="me-4 card-body rounded shadow"
+								v-for="loan in loans"
+								style="z-index: 1"
+							>
 								<h5 class="card-title pb-4">{{loan.name}}</h5>
 								<p class="card-title">Amount: {{loan.amount}}</p>
 								<p class="card-title">Payments: {{loan.payments}}</p>
