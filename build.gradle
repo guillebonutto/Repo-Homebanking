@@ -25,8 +25,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml' //download Jackson Dataformat XML package. The response is returned in XML format instead of JSON format
 	implementation 'com.github.librepdf:openpdf:1.3.8'
-	implementation 'org.postgresql:postgresql'
-	//runtimeOnly 'com.h2database:h2'
+	//implementation 'org.postgresql:postgresql'
+	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
